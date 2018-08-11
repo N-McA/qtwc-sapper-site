@@ -15,8 +15,8 @@
 
     {#each brit as p}
 
-    <div class="column is-half">
-      <div class="card" style="min-height: 100%;">
+    <div class="column is-half team-column">
+      <div class="card" style="min-height: 100%; padding-top: 0.75rem;">
         <div class="has-text-centered name-div">
           <h2 class="is-size-4 has-text-weight-bold">
             {p.fullName}
@@ -48,7 +48,7 @@
 
         <hr/>
 
-        <div class="card-content">
+        <div class="card-content team-card">
           <div class="content">
             <p style="white-space: pre-wrap;">
               {p.text}
@@ -77,7 +77,7 @@
     {#each canadian as p}
 
     <div class="column is-half">
-      <div class="card" style="min-height: 100%;">
+      <div class="card" style="min-height: 100%; padding-top: 0.75rem;">
         <div class="has-text-centered name-div">
           <h2 class="is-size-4 has-text-weight-bold">
             {p.fullName}
@@ -109,7 +109,7 @@
 
         <hr/>
 
-        <div class="card-content">
+        <div class="card-content team-card">
           <div class="content">
             <p style="white-space: pre-wrap;">
               {p.text}
@@ -165,6 +165,15 @@
   .team-columns {
     max-width: 900px;
     margin: auto;
+  }
+
+  @media (max-width: 400px) {
+    .column.team-column {
+      padding: 0.35rem;
+    }
+    .card-content.team-card {
+      padding: 1rem;
+    }
   }
 
   section.team-section {

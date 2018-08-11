@@ -1,4 +1,4 @@
-<nav class="navbar" style="background-color: #00000000;">
+<nav class="navbar" style="background-color: #7696bc;">
 	<div class="container">
 		<div class="navbar-brand">
 			<a class="navbar-item" href="/">
@@ -7,9 +7,9 @@
 			<span 
 			  class="navbar-burger burger {hideMenu || 'is-active'}" 
 				on:click="set({hideMenu: !hideMenu})">
-				<span></span>
-				<span></span>
-				<span></span>
+				<span style="background:white;"></span>
+				<span style="background:white;"></span>
+				<span style="background:white;"></span>
 			</span>
 		</div>
 		<div id="mainNavbar" class="navbar-menu {hideMenu || 'is-active'}">
@@ -20,8 +20,8 @@
 				<a href="/teams" class="navbar-item">
 					Teams
 				</a>
-				<a href="/route" class="navbar-item">
-					Route
+				<a href="/race" class="navbar-item">
+					Race
 				</a>
 				<a href="/faq" class="navbar-item">
 					FAQ
@@ -37,8 +37,13 @@
 </nav>
 
 <style>
+
+	span.white-line {
+	}
+
 	nav * {
 		color: #ffffff;
+		background-color: #7696bc;
 	}
 
 	.navbar-item:hover {

@@ -1,4 +1,6 @@
-<section class="hero is-landing is-large">
+
+
+<section id="hero" class="hero is-landing is-large blur-bg">
 	<div class="hero-body">
 		<div class="container has-text-centered">
 
@@ -35,6 +37,27 @@
 	</div>
 </section>
 
-<div id="section-below-hero">
-	<img id="hero-img" src='imgs/padded-arm-up.jpg'>
-</div>
+<style>
+
+	#hero {
+		background-color: #7696bc;
+		background-image: url('imgs/padded-arm-up.jpg');
+		background-size: 100%;
+    background-repeat: no-repeat;
+		background-position: bottom 0 left 0;
+	}
+
+	#section-below-hero {
+		height: 0rem;
+		display: block;
+		position: relative;
+	}
+
+	#hero-img {
+		position: relative;
+		width: 100%;
+		/* z-index: -1; */
+		bottom: calc(75.5vw + -0.5rem);
+		filter: blur(0.175vw);
+	}
+</style>

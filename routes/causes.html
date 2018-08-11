@@ -2,7 +2,7 @@
   <title>Causes - Quad Tandem Worldies</title>
 </svelte:head>
 
-<section class='bg-light'>
+<section>
   <div class="has-text-centered" style="max-width: 700px; margin: auto;">
     <div class="card" style='margin: 1.25rem; padding:1.25rem;'>
       <h1 class='is-size-3 has-text-weight-semibold'>Causes</h1>
@@ -12,11 +12,11 @@
 </section>
 
 {#each charities as c}
-<section class='bg-white'>
+<section>
   <div class="has-text-centered" style="max-width: 700px; margin: auto;">
     <div class="card charity-card">
       <div class="columns is-multiline is-gapless is-mobile is-centered is-vcentered" style="margin:0;">
-        <div class="column is-narrow">
+        <div class="column is-narrow charity-column">
           <div class="cause-img-div">
             <img class="cause-img  {causeClass(c.cause)}" src="{c.causeImage}" alt="{c.cause}">
           </div>
@@ -100,6 +100,19 @@
     background: #325885;
     color: white;
     font-size: 1.25rem;
+  }
+
+  @media (max-width: 400px) {
+    .column.charity-column {
+      padding: 0.35rem;
+    }
+    .charity-card > p {
+      padding: 0rem;
+    }
+    .charity-card {
+      margin: 0.5rem; 
+      padding: 0.5rem 1.25rem;
+    }
   }
 </style>
 

@@ -5,16 +5,27 @@
 		</div>
 
 		<div class="columns is-centered is-multiline">
-			{#each questions as q}
+			{#each someQuestions(questions, nQuestions) as q}
 				<FAQElement {...q}/>
 			{/each}
 		</div>
+
+		{#if nQuestions}
+			<div class="has-text-centered">
+				<a class='button is-large' href='/faq'>More FAQs</a>
+			</div>
+		{/if}
 
 	</div>
 </section>
 
 <script>
 	export default {
+		helpers: {
+			someQuestions(qs, nqs) {
+				return qs.slice(0, nqs)
+			}
+		},
 		data: () => ({
 			questions: [
 				{

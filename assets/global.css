@@ -1,8 +1,9 @@
 html {
-  background-color: #7696bc;
+  background-color: #faf6fb;
 }
 
-body, #sapper {
+body,
+#sapper {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
@@ -55,6 +56,8 @@ figure.image {
 
 .section {
   padding: 3rem 1.5rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .content h1 {
@@ -176,23 +179,4 @@ figure.image {
 
 .footer {
   padding: 2rem 1.5rem 1rem;
-}
-
-#section-below-hero {
-  height: 0rem;
-  display: block;
-  position: relative;
-}
-
-#hero-img {
-  position: relative;
-  width: 100%;
-  z-index: -1;
-  bottom: calc(75.5vw + -0.5rem);
-  filter: blur(0.175vw);
-}
-
-section {
-	display: flex;
-	flex-direction: column;
 }
